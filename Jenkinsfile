@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Build & Deploy') {
             steps {
-                echo 'Building..'
+                bat "mvn clean package deploy"
             }
         }
 	}
